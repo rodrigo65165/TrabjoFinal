@@ -1,0 +1,47 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Acerca de{% endblock %}
+
+{% block background %}{% static 'core/img/2.jpeg' %} {% endblock %}
+
+{% block headers %}
+    <br>
+    <h1>Nosotros</h1>
+    <span class="subheading">CONOCENOS</span>
+    <br><br>
+    <a href="#cuadros"><img src="{% static 'core/img/down.svg' %}" height="20s" alt=""></a>
+
+{% endblock %}
+
+{% block content %}
+
+<div id="cuadros" class="row">
+    <div class="col-4" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; border-color: #000017; height: 50px; border-radius: 15px;">
+      <div id="list-example" class="list-group">
+        <a class="list-group-item list-group-item-action" href="#list-item-1"><img src="{% static 'core/img/isotipo.svg' %}" height="15s" alt="">     Dynamic</a>
+        <a class="list-group-item list-group-item-action" href="#list-item-2"><i class="fa fa-paper-plane-o" aria-hidden="true"></i> Historia</a>
+        <a class="list-group-item list-group-item-action" href="#list-item-3"><i class="fa fa-desktop" aria-hidden="true"></i> Mision</a>
+        <a class="list-group-item list-group-item-action" href="#list-item-4"><i class="fa fa-users" aria-hidden="true"></i> Vision</a>
+      </div>
+    </div>
+    <div class="col-8" >
+      <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0" >
+        <font color="#ffffff"><h4 id="list-item-1"><strong color: blank>Dynamic</strong></h4>
+        <p style="font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif" > <center> <img src="{% static 'core/img/isotipo.svg' %}" height="70s" alt=""> </center> <br> Lorem Ipsum es simplemente un texto ficticio de la industria de la impresión y la composición tipográfica. Lorem Ipsum ha sido el texto ficticio estándar de la industria desde el año 1500, cuando un impresor desconocido tomó una galera de tipos y la codificó para hacer un libro de muestras tipográficas. Ha sobrevivido no solo cinco siglos, sino también el salto a la composición tipográfica electrónica, permaneciendo esencialmente sin cambios. Se popularizó en la década de 1960 con el lanzamiento de hojas de Letraset que contenían pasajes de Lorem Ipsum y, más recientemente, con software de autoedición como Aldus PageMaker, que incluía versiones de Lorem Ipsum.</p>
+        <h4 id="list-item-2">Historia</h4>
+        <p style="font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif"><center><img src="{% static 'core/img/imagens.jpeg' %}" height="250s" alt=""></center><font color="#ffffff">
+          Dynamic Metal Works es una empresa ubicada en el puerto de Ilo, con más de 20 años de
+          experiencia en el rubro de metal mecánica, especializados en rectificaciones, elaboración y
+          reconstrucción de piezas en acero. Como fortalezas, cuenta con una muy buena reputación
+          de los clientes y colaboradores, satisfechos con la atención y calidad de maquinados de alta
+          precisión, en entornos de trabajo agradable y apto para laborar.</p>
+        <h4 id="list-item-3">Mision</h4>
+        <p class="paragrafo" style="font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif"><center><img src="{% static 'core/img/mision.jpeg' %}" height="250s" alt=""></center>Brindar un servicio de calidad a la industria, a través del compromiso de un equipo capacitado para satisfacer todos los requerimientos de nuestros clientes en cada una de las aéreas que conformamos.</p>
+        <h4 id="list-item-4">Vision</h4>
+        <p style="font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif"><center><img src="{% static 'core/img/vision.jpeg' %}" height="150s" alt=""></center>Ser una empresa líder en la industria automotriz, comprometidos con brindar un servicio de calidad, donde la satisfacción de nuestros clientes es nuestro principal objetivo.</p>
+      </font>
+      </div>
+    </div>
+  </div>
+{% endblock %}

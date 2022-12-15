@@ -1,0 +1,42 @@
+{% extends 'core/base3.html' %}
+
+{% load static %}
+
+{% block title %}Colaborador{% endblock %}
+
+{% block background %}{% static 'core/img/ty.jpeg' %}{% endblock %}
+
+{% block headers %}
+<div style="background-color: white; border-radius: 20px;" >
+    <br>
+    <img src="{% static 'core/img/isotipo.svg' %}" height="70s" alt="">
+    <br>
+    <label for=""></label>
+    <h3 style="color: #000017;">COLABORADOR</h3>
+    <label for=""></label>
+    <center>
+        <h6>
+            <form method="post" action="/logear/" class="">
+                {% csrf_token %}
+                <div class="col-md-6">
+                    <label for="" style="color: #000017;" >Usuario</label>
+                    <input type="text" class="form-control" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; border-color: #000017; height: 50px; border-radius: 15px;border-width: 2mm;" id="usuario" name="username" placeholder="Ingrese su usuario">
+                    <label for=""></label>
+                </div>
+                <div class="col-md-6">
+                    <label for="" style="color: #000017;">Clave</label>
+                    <input type="password" class="form-control" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; border-color: #000017; height: 50px; border-radius: 15px;border-width: 2mm;" id="clave" name="password" placeholder="************">
+                    <label for=""></label>
+                </div>
+                <div>
+                    <label for=""></label>
+                    <button type="submit" value="Ingresar" class="btn btn-primary" style="width: 300px ; background-color: #ec3237; border: 0ch;border-radius: 50px;">Enviar</button>
+                    <label for=""></label>
+                </div>
+            </form>
+        </h6>
+    </center>
+    <br>
+</div>
+
+{% endblock %}

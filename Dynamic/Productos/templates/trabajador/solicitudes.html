@@ -1,0 +1,36 @@
+{% extends 'core/base4.html' %}
+
+{% load static %}
+
+{% block title %}Portada{% endblock %}
+
+{% block background %}{% endblock %}
+
+{% block content %}
+
+{% for project in projects %}
+
+<!-- Proyecto -->
+<body style="background-color: #1B2631;">
+    <div id="solicitudes" class="row project visita " style="background-color: #ffffff;">   
+        <div>
+            <form action="/eliminarVisita/{{project.ruc}}">
+                <h2 class="visitatexto section-heading title">{{project.representante}}</h2>
+                <h5 class="visitatexto section-heading title" style="font-size: 25px;"><i class="fa fa-building-o" aria-hidden="true"></i> {{project.ruc}} | {{project.razonsocial}}</h5>
+                <h2 class="visitatexto section-heading title" style="font-size: 20px;"><i class="fa fa-envelope-o" aria-hidden="true"></i> {{project.correo}}</h2>
+                <h2 class="visitatexto section-heading title" style="font-size: 20px;"><i class="fa fa-phone" aria-hidden="true"></i> {{project.telefono}}</h2>
+                <div class="visitaContenido">
+                    <p class="visitatexto">{{project.descripcion}}</p>    
+                </div>   
+                <button style="background-color: #a02828; border: 0px; " type="submit" class=" visitatexto btn btn-primary mb-3">Rechazar</button>
+                <button style="background-color: #a02828; border: 0px; " type="submit" class=" visitatexto btn btn-primary mb-3">Aceptar</button>
+            </form>
+        </div>
+    </div>
+    <br>
+</body>
+
+
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'core/base3.html' %}
+
+{% load static %}
+
+{% block title %}Colaborador{% endblock %}
+
+{% block background %}{% static 'core/img/34.jpeg' %}{% endblock %}
+
+{% block headers %}
+
+    <br>
+    <h1 style="color: #ffffff; font-size: 70px; ">!!Que haremos hoy!!</h1>
+    <span class="subheading" style="color: #ffffff; " ><strong>COMENZAMOS</strong></span>
+    <br><br>
+    <a href="#cuadros"><img src="{% static 'core/img/down.svg' %}" height="20s" alt=""></a>
+
+{% endblock %}
+
+{% block content %}
+
+<label id="cuadros" for=""></label>
+<label for=""></label>
+
+
+<div class="card" style="width: 18rem;">
+  <center><img src="{% static 'core/img/cho.jpeg' %}" style="width: 200px;" class="card-img-top" alt="..."></center>
+    <div class="card-body">
+      <h5 class="card-title">Solicitudes</h5>
+      <p class="card-text">Almacenamiento de solicitudes de clientes que soliciten cualquier tipo de trabajo. </p>
+      <center><a  style="background-color: #ec3237; border: 0px; " href="{% url 'solicitudes' %}" class="btn btn-primary"> VER Solicitudes</a></center>
+    </div>
+  </div>
+  <label for=""></label>
+  <div class="card" style="width: 18rem;">
+    <center><img src="{% static 'core/img/789.jpeg' %}" style="width: 200px;" class="card-img-top" alt="..."></center>
+    <div class="card-body">
+      <h5 class="card-title">Trabajos</h5>
+      <p class="card-text">Solicitudes aceptadas por el administrador de la empresa.</p>
+      <center><a style="background-color: #ec3237; border: 0px; " href="/solicitudes/" class="btn btn-primary">VER Trabajos</a></center>
+    </div>
+  </div>
+
+{% endblock %}

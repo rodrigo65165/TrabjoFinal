@@ -1,0 +1,102 @@
+{% extends 'core/base2.html' %}
+
+{% load static %}
+
+{% block title %}Contacto{% endblock %}
+
+{% block background %}{% static 'core/img/ou.jpeg' %}{% endblock %}
+
+{% block headers %}
+<h2 style="color: #ffffff" >Contactanos</h2>
+<br>
+<body style="background-color: #1B2631;">
+  <form class="row g-3" action="/guardarsolicitud/" method="post" > {% csrf_token %}
+    <div class="col-md-6" >
+      <input type="text" class="form-control" required style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; border-color: #1B2631; height: 50px; border-radius: 20px; border-width: 2mm;" id="ruc" name="ruc" placeholder="Ruc">
+      <div class="valid-feedback" >
+        ok
+      </div>
+      <div class="invalid-feedback"> 
+        *
+      </div>
+    </div>
+    <div class="col-md-6" >
+      <input type="text" class="form-control" required style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; border-color: #000017; height: 50px; border-radius: 15px;border-width: 2mm;" id="representante" name="representante" placeholder="Representante">
+      <div class="valid-feedback">
+        ok
+      </div>
+      <div class="invalid-feedback"> 
+        *
+      </div>
+    </div>
+    <div class="col-12">
+      <label for=""></label>
+      <input type="text" class="form-control" required style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; border-color: #000017; height: 50px; border-radius: 15px;border-width: 2mm;" id="razonsocial" name="razonsocial" placeholder="Razon Social">
+      <div class="valid-feedback">
+        ok
+      </div>
+      <div class="invalid-feedback"> 
+        *
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for=""></label>
+      <input type="text" class="form-control" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; border-color: #000017; height: 50px; border-radius: 15px;border-width: 2mm;" id="email" name="email" placeholder="Email">
+      <div class="valid-feedback">
+        ok
+      </div>
+      <div class="invalid-feedback"> 
+        *
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for=""></label>
+      <input type="text" class="form-control" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; border-color: #000017; height: 50px; border-radius: 15px;border-width: 2mm;" id="fono" name="fono" placeholder="Telefono">
+      <div class="valid-feedback">
+        ok
+      </div>
+      <div class="invalid-feedback"> 
+        *
+      </div>
+    </div>
+    <div class="col-12">
+      <label for=""></label>
+      <textarea class="form-control" required style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; border-color: #000017; border-radius: 15px;border-width: 2mm;" id="exampleFormControlTextarea1" rows="3" name="txtdesc" id="txtdesc" placeholder="Descripcion"></textarea>
+      <div class="valid-feedback">
+        ok
+      </div>
+      <div class="invalid-feedback"> 
+        *
+      </div>
+      <label for=""></label>
+    </div>
+    <div class="col-12">
+      <button onclick="showAlert()"type="submit" class="btn btn-primary" style="background-color: #d8393f; border: 0ch;">Enviar</button>
+    </div>
+  </form>  
+</body>
+
+
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (() => {
+      'use strict'
+
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      const forms = document.querySelectorAll('.needs-validation')
+
+      // Loop over them and prevent submission
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })()
+  </script>
+{% endblock %}
+
